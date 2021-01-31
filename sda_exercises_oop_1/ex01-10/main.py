@@ -13,6 +13,8 @@ def main():
         cat_sound = cat.make_sound()
         print(cat_sound)
 
+    print(cat_object.eat_mouse())
+
 
 if __name__ == "__main__":
     main()
