@@ -9,5 +9,4 @@ class Cat:
 
     def eat_mouse(self) -> int:
         self.eaten_mouse += 1
-        print(f"I ate {self.eaten_mouse} mouses")
         return self.eaten_mouse
