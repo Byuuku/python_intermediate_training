@@ -1,6 +1,11 @@
+from cat import Cat
+
+
 def main():
-    print("Main")
+    cat_object = Cat("Bonifacy")
+    cat_sound: str = cat_object.make_sound()
+    print(cat_sound)
 
 
-if __name__ == "name":
+if __name__ == "__main__":
     main()
