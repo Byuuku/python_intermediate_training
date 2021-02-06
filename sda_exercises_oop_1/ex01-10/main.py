@@ -1,6 +1,7 @@
 from cat import Cat
 from dog import Dog
 from car import Car
+from vet import Vet
 
 
 def main():
@@ -36,10 +37,15 @@ def main():
         print(dog_sound)
 
     car = Car()
-    print(car.move())
+    print(car.move() + "\n")
 
     cat = Cat("New kitty appear")
-    print(cat.move())
+    print(cat.move() + "\n")
+
+    vet = Vet()
+    print(vet.say_cat_hello(cat_object))
+    print(vet.say_dog_hello(dog_object_3))
+    print(Vet.say_hello(cat_object_2))
 
 
 if __name__ == "__main__":

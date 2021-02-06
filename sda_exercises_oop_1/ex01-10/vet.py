@@ -13,6 +13,6 @@ class Vet:
     def say_dog_hello(cls, dog: Dog) -> str:
         return f"Hello, brave {dog.name}!"
 
-    @classmethod
-    def say_hello(cls, animal: Animal) -> str:
+    @staticmethod
+    def say_hello(animal: Animal) -> str:
         return f"Hello, {animal.name}"
