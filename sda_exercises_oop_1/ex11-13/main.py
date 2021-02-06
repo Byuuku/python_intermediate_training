@@ -3,24 +3,21 @@ from figures import *
 
 def main():
     circle1 = Circle(5)
-    circle2 = Circle(10)
-    circle3 = Circle(15)
-    triangle1 = Triangle(15, 5)
-    triangle2 = Triangle(20, 10)
-    triangle3 = Triangle(10, 5)
-    rectangle1 = Rectangle(35, 5)
-    rectangle2 = Rectangle(45, 5)
-    rectangle3 = Rectangle(50, 5)
+    circle2 = Circle(12)
+    circle3 = Circle(12)
+    triangle1 = Triangle(7, 3)
+    triangle2 = Triangle(10, 8)
+    triangle3 = Triangle(5, 12)
+    rectangle1 = Rectangle(4, 8)
+    rectangle2 = Rectangle(14, 25)
+    rectangle3 = Rectangle(10, 2)
 
-    print(circle1.get_area())
-    print(triangle2.get_area())
-    print(rectangle3.get_area())
-
-    # area = Figure.count_area([triangle3, circle3, rectangle2])
-    # print(area)
-
-    area = count_area_func(triangle3, circle3, rectangle2)
-    print(area)
+    print(circle1.getArea())
+    print(triangle1.getArea())
+    print(rectangle1.getArea())
+    result = Figures.check_area(100.00, [triangle1, rectangle1])
+    print(result)
+    print(Figures.count_area([triangle1, rectangle1]))
 
 
 if __name__ == "__main__":

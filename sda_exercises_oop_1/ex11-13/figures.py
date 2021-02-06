@@ -1,51 +1,51 @@
-import abc
 from math import pi
 
+from figure import Figure
 
-class Figure(abc.ABC):
-    @abc.abstractmethod
-    def get_area(self):
+from abc import ABC, abstractmethod
+
+
+class Figures(ABC):
+    @abstractmethod
+    def getArea(self):
         pass
 
     @staticmethod
-    def count_area(figures: list) -> float:
+    def count_area(figure_list: list) -> float:
         area = 0.0
-        for figure in figures:
-            area += figure.get_area()
+        for figure in figure_list:
+            area += figure.getArea()
         return area
 
-
-def count_area_func(*args):
-    area = 0.0
-    for arg in args:
-        area += arg.get_area()
-    return area
+    @staticmethod
+    def check_area(area: float, figure_list: list) -> bool:
+        figure_area = Figures.count_area(figure_list)
+        return area > figure_area
 
 
-class Circle(Figure):
+class Rectangle(Figures):
 
-    def __init__(self, r):
-        self.r = r
+    def __init__(self, high: float, width: float):
+        self.high = high
+        self.width = width
 
-    def get_area(self):
-        return round(pi * self.r ** 2, 2)
-
-
-class Triangle(Figure):
-
-    def __init__(self, a, h):
-        self.a = a
-        self.h = h
-
-    def get_area(self):
-        return (self.a * self.h) / 2
+    def getArea(self):
+        return self.high * self.width
 
 
-class Rectangle(Figure):
+class Circle(Figures):
+    def __init__(self, radius: float):
+        self.radius = radius
 
-    def __init__(self, a, b):
-        self.a = a
-        self.b = b
+    def getArea(self):
+        return round(self.radius * self.radius * pi, 4)
 
-    def get_area(self):
-        return self.a * self.b
+
+class Triangle(Figures):
+
+    def __init__(self, high: float, base: float):
+        self.high = high
+        self.base = base
+
+    def getArea(self):
+        return (self.high * self.base) / 2.0
