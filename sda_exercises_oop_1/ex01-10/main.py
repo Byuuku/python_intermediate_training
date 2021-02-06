@@ -24,9 +24,9 @@ def main():
     print(f"{cat_object_2.name} ate {cat_object_2.eat_mouse()} mouses so far")
 
     dog_object = Dog("Jackie", "woof, woof")
-    dog_object_2 = Dog("Piorun")
+    dog_object_2 = Dog("Thunder")
     dog_object_3 = Dog("Alonso")
-    dog_object_4 = Dog("Imbir", "ouuu, ouuu")
+    dog_object_4 = Dog("Morty", "ouuu, ouuu")
 
     dogs = [dog_object, dog_object_2, dog_object_3, dog_object_4]
 
