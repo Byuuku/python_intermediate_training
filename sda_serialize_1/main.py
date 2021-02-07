@@ -1,5 +1,5 @@
 from pickle_training import pickle_write, pickle_read
-from csv_training import csv_write
+from csv_training import csv_write, csv_read
 
 
 def main():
@@ -16,6 +16,8 @@ def main():
     ]
 
     csv_write(new_users)
+    users_list = csv_read()
+    print(users_list)
 
 
 if __name__ == "__main__":
