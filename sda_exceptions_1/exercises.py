@@ -32,7 +32,17 @@ def case_3(num: int, div: int) -> float:
     try:
         result = num / div
     except ZeroDivisionError as zd_exc:
-        print(f"Zero exception: {zd_exc} caught")
+        print(f"Zero exception: {zd_exc.args} caught")
         result = float(sys.maxsize)
         # result = sys.float_info.max
     return result
+
+
+def case_4(dictionary: dict):
+    key = "items"
+    try:
+        items: list = dictionary[key]
+        for item in items:
+            print(item)
+    except KeyError as key_exc:
+        print(f"Key '{key}' not found, more information: {key_exc.__traceback__}")
