@@ -1,4 +1,4 @@
-from exercises import case_1, case_2, case_3, case_4, case_4a
+from exercises import case_1, case_2, case_3, case_4, case_4a, case_6, case_7, case_7a
 
 
 def main():
@@ -18,12 +18,21 @@ def main():
     # print(result)
     # print(f"Finish c3")
 
-    dictionary = {
-        "products": ["Butter, Bread"]
-    }
-    case_4(dictionary)
+    # dictionary = {
+    #     "products": ["Butter, Bread"]
+    # }
+    # case_4(dictionary)
+    #
+    # case_4a(dictionary)
 
-    case_4a(dictionary)
+    # try:
+    #     case_6()
+    # except NotImplementedError as not_imp_exc:
+    #     print(f"Not implemented exception: {not_imp_exc.args} caught")
+
+    case_7("file")
+
+    case_7a()
 
 
 if __name__ == "__main__":

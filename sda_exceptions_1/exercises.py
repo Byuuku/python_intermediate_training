@@ -55,3 +55,27 @@ def case_4a(dictionary: dict):
         print(item)
     if not items:
         print(f"Key '{key}' does not exist or the list is empty")
+
+
+def case_6():
+    raise NotImplementedError("Solved in the future")
+
+
+def case_7(file_name: str):
+    fd = None
+    try:
+        fd = open("C:\\" + file_name)
+    except IOError as io_exc:
+        print(f"IO exception: {io_exc.args} caught")
+    finally:
+        if fd:
+            print("File descriptor closing")
+            fd.close()
+
+
+def case_7a():
+    try:
+        with open("C:\\aaa.txt") as fd:  # context_manager
+            print(f"File is open")
+    except IOError as io_exc:
+        print(f"IO exception: {io_exc.args} caught")
