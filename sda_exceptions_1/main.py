@@ -1,4 +1,4 @@
-from exercises import case_1, case_2, case_3, case_4
+from exercises import case_1, case_2, case_3, case_4, case_4a
 
 
 def main():
@@ -21,8 +21,9 @@ def main():
     dictionary = {
         "products": ["Butter, Bread"]
     }
-
     case_4(dictionary)
+
+    case_4a(dictionary)
 
 
 if __name__ == "__main__":

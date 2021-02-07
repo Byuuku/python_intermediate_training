@@ -46,3 +46,12 @@ def case_4(dictionary: dict):
             print(item)
     except KeyError as key_exc:
         print(f"Key '{key}' not found, more information: {key_exc.__traceback__}")
+
+
+def case_4a(dictionary: dict):
+    key = 'items'
+    items: list = dictionary.get(key, [])
+    for item in items:
+        print(item)
+    if not items:
+        print(f"Key '{key}' does not exist or the list is empty")
