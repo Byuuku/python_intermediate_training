@@ -1,7 +1,7 @@
 from pickle_training import pickle_write, pickle_read
 from csv_training import csv_write, csv_read
 from json_training import json_write, json_read
-from human import Human
+from human import Human, json_human_write, json_human_read
 
 
 def main():
@@ -43,19 +43,16 @@ def main():
     #         "lines": 3
     #     }
     # ]
-    #
-    # json_write(new_objects)
-    #
-    # data_list = json_read()
-    # print(data_list)
 
-    my_human = Human("James", "Kent", 29)
-    my_human_1 = Human("Patrick", "Galagan", 23)
-    my_human_2 = Human("Silvia", "Angelic", 27)
-    my_human.convert_to_dict(my_human.__dict__)
-    my_human.convert_to_dict(my_human_1.__dict__)
-    my_human.convert_to_dict(my_human_2.__dict__)
-    print(my_human.__dict__)
+    # my_human = Human("James", "Kent", 29)
+    # my_human_1 = Human("Patrick", "Galagan", 23)
+    # my_human_2 = Human("Silvia", "Angelic", 27)
+    #
+    # my_humans = [my_human, my_human_1, my_human_2]
+
+    my_humans = json_human_read()
+    for human in my_humans:
+        print(human)
 
 
 if __name__ == "__main__":
