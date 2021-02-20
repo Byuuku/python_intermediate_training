@@ -1,5 +1,5 @@
 from sda_decorator_1.case_2 import read_file
-from sda_decorator_1.case_3 import throw_exception_file
+from sda_decorator_1.case_3 import throw_exception_file, read_does_not_exist_file
 
 def main():
 #     print("Step: 3 - Passing 'main' arguments to 'print_hello_world'")
@@ -28,7 +28,8 @@ def main():
 #     print(f"Step: 6 - Print: 'print_hello_world' function arguments {a, b} from Step 3: 'main' function")
 #     return a, b
 
-    throw_exception_file()
+    # throw_exception_file()
+    read_does_not_exist_file()
 
 
 if __name__ == "__main__":
