@@ -1,13 +1,13 @@
 def iterator_ex_3(n):
     import sys
-    iterator = SumIterator(n)
+    iterator = Iterator(n)
     print(f"Size of list in bytes: {sys.getsizeof(iterator)}")
     result = sum(iterator)
     print(f"Size of one number in bytes: {sys.getsizeof(result)}")
     print(result)
 
 
-class SumIterator:
+class Iterator:
     def __init__(self, n):
         self.amount = n
         self.values_created = 0
