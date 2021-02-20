@@ -17,7 +17,7 @@ def exercises_1():
     print(result_c)
 
 
-class BankAccount():
+class BankAccount:
     def __init__(self, name: str, balance: Decimal):
         self.name = name
         self.balance = balance
